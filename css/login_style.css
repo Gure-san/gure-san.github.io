@@ -1,0 +1,198 @@
+html,body,div,span,h1,h2,p,a,img,ol,ul,li,input,button {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'sans';
+    font-display: fallback;
+    src: url(../fonts/sans/SinkinSans-400Regular-webfont.woff) format('woff');
+}
+/* General */
+
+
+
+body {
+    font-family: 'sans', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: #03030a;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.login {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 500px;
+    background-image: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(../bg/bg4.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-right: 1px solid cyan;
+    border-left: 1px solid cyan;
+}
+
+.isian {
+    width: 70%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(-1rem);
+}
+.header {
+    font-family: 'sans';
+    font-size: 1.8rem;
+    text-shadow:0px 0px 5px cyan;
+}
+.login input {
+    font-size: .9rem;
+    width: clamp(250px, 50% ,300px);
+    height: 35px;
+    text-align: center;
+    background: rgba(0,0,0,.1);
+    outline: none;
+    color: white;
+    border: none;
+    border-bottom: 1px solid cyan;
+    transition: 300ms;
+}
+.login input[type = submit] {
+    font-size: .9rem;
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    /* background: ; */
+    outline: none;
+    color: white;
+    border: none;
+    /* border: 2px solid cyan; */
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 300ms;
+}
+input::placeholder {
+    color: white;
+    font-size: .8rem;
+}
+.login input:focus {
+    background: rgba(0,0,0,.4);
+    width: 330px;
+}
+.login button {
+    width: 110px;
+    height: 30px;
+    outline: none;
+    border: 1px solid cyan;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: .8rem;
+    transition: .3s;
+}
+.login button:hover {
+    background: rgba(0, 255, 255, 0.322);
+}
+.kotak {
+    background: cyan;
+    border-radius: 10px;
+}
+.atas {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    top: 3%;
+    left: 0;
+    right: 0;
+}
+.satu {
+    height: 1px;
+    width: 35%;
+}
+.dua {
+    background: cyan;
+    border-radius: 10px;
+    width: 20%;
+    height: 5px;
+    box-shadow: 0px 0px 10px cyan,
+                0px 0px 10px cyan;
+}
+.tiga {
+    width: 35%;
+    height: 1px;
+}
+.kiri {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    left: 23px;
+    top: 0px;
+    box-sizing: border-box;
+}
+.sub-satu {
+    width: 1px;
+    height: 20%;
+}
+.empat {
+    border-radius: 10px;
+    background: cyan;
+    width: 5px;
+    height: 35%;
+    box-shadow: 0px 0px 10px cyan;
+}
+.sub-dua {
+    width: 1px;
+    height: 20%;
+}
+.kanan {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    right: 23px;
+    top: 0px;
+    box-sizing: border-box;
+}
+.lima {
+    border-radius: 10px;
+    background: cyan;
+    width: 5px;
+    height: 35%;
+    box-shadow: 0px 0px 10px cyan;
+}
+.bawah {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    align-items: flex-end;
+    justify-content: space-around;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+}
+.enam {
+    width: 36%;
+    height: 1px;
+}
+.tuju {
+    border-radius: 10px;
+    background: cyan;
+    width: 15%;
+    height: 5px;
+    box-shadow: 0px 0px 10px cyan;
+}
+.delapan {
+    width: 36%;
+    height: 1px;
+}
