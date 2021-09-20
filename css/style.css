@@ -36,6 +36,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .container {
     width: 100vw;
     overflow-x: hidden;
@@ -143,7 +144,7 @@ nav {
     background-color: #09090aaf;
     backdrop-filter: blur(5px);
     top: 0;
-    left: 0;
+    /* left: 0; */
     right: 0;
     z-index: 3;
     list-style: none;
@@ -240,8 +241,8 @@ nav {
     font-weight: 500;
     background: linear-gradient(to right, #e4e2e2,#747474);
     text-shadow:  none;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .sub-hero {
@@ -269,7 +270,7 @@ nav {
     width: 100%;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../bg/bg3.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(27, 27, 27, 0.5)), url(../bg/bg3.jpg);
     box-sizing: border-box;
     padding: 10rem 0;
     display: grid;
@@ -280,12 +281,12 @@ nav {
     position: relative;
 }
 .judul-promo {
-    width: 400px;
+    width: clamp(320px, 50%, 400px);
     grid-column: 1 / -1;
     box-sizing: border-box;
     padding: 0 20px;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     height:60px;
     display: flex;
     align-self: flex-start;
@@ -399,8 +400,8 @@ nav {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    font-size: 1.5rem;
-    text-shadow: 0 0 10px cyan;
+    font-size: 2rem;
+    text-shadow: 0 0 10px red;
     cursor: pointer;
 }
 .box h1 {
@@ -414,17 +415,12 @@ nav {
     background-image: url(../bg/bg1.jpg);
     background-size: cover;
     background-position: center;
-    /* border: 1px solid cyan; */
 }
-.deskirpsi {
-    width: 100%;
-    /* height: 300px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-    padding: 1rem;
-    /* background-color: red; */
+.gbr2 {
+    background-image: url(../bg/bg2.jpg);
+}
+.gbr3 {
+    background-image: url(../bg/bg3.jpg);
 }
 .box ul {
     list-style: none;
@@ -449,14 +445,48 @@ section {
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     justify-items: center;
 }
+.detailLayanan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000e1;
+    z-index: 11;
+    visibility: hidden;
+    opacity: 0;
+    transition: 500ms;
+}
+.fade-out {
+    visibility: visible;
+    opacity: 1;
+}
+.bflex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: clamp(270px, 50%, 330px);
+    transform: translateY(2rem);
+    height: 300px;
+    max-height: 485px;
+    padding: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    background-color: #080808d5;
+    border: 1px solid #919494;
+}
 .kotak {
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #080808e1;
-    border: 1px solid #4b4b4b48;
+    background-color: #131212e1;
+    border: 1px solid #575656d5;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
@@ -518,14 +548,14 @@ section {
     cursor: pointer;
 }
 .judul {
-    width: 400px;
+    width: clamp(320px, 50%, 400px);
     font-size: 1.4rem;
     font-weight: 500;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #080808ce;
+    background-color: #181717;
     border-radius: 1rem;
 }
 /* section area */
@@ -541,7 +571,6 @@ footer {
     bottom: 0;
 }
 .foot-1 {
-    /* background-color: red; */
     width: 80%;
     list-style: none;
     display: flex;
@@ -649,7 +678,7 @@ footer {
         justify-content: center;
     }
     .nav-toggle {
-        padding: 5vh 0;
+        padding: 4vh 0;
         width: 100vw;
         backdrop-filter: blur(0);
         background-color: #0b0b0cfa;
@@ -693,19 +722,18 @@ footer {
         row-gap: 2rem;
     }
     .card {
-        width: 350px;
+        width: 335px;
         height: 250px;
+    }
+    .card span {
+        width: 330px;
+        height: 225px;
+    }
+    .card:hover {
+        transform: scale(1.04);
     }
     .card img {
         max-height: 100%;
-    }
-    .judul-art {
-        width: 280px;
-        height: 50px;
-        padding: 0 .7rem;
-        font-size: .8rem;
-        grid-column: auto;
-        align-self: flex-end;
     }
 
     /* Area Header responsive */
@@ -722,7 +750,7 @@ footer {
         padding-bottom: 1rem;
     }
     div.layanan::-webkit-scrollbar {
-        height: 0.45rem;
+        height: 0.35rem;
     }
     div.layanan::-webkit-scrollbar-thumb {
         border-radius: 1rem;
@@ -748,17 +776,11 @@ footer {
         box-shadow: -1rem 0 1.5rem black;
         transition: 300ms;
     }
-    h1.judul {
-        width: 250px;
-        height: 50px;
-        font-size: 1.3rem;
-    }
 
     /* Area Feature responsive */
 
 
     footer {
-        /* margin-top: 3rem; */
         flex-wrap: wrap;
     }
     .foot-1{
@@ -777,7 +799,8 @@ footer {
         width: 90%;
     }
     .social-media {
-        width: 40%;
+        margin-top: 1rem;
+        width: clamp(160px, 50%, 170px);
     }
     .foot-1 {
         order: 2;
