@@ -311,10 +311,13 @@ nav {
     max-width: 100%;
     border-radius: 10px;
 }
+.card span.mocca,
+.card span.slank,
+.card span.ls {
+    width: 100%;
+}
 .card span {
     position: absolute;
-    width: 350px;
-    height: 238px;
     box-sizing: border-box;
     background-color: #080808a1;
     display: flex;
@@ -329,13 +332,26 @@ nav {
     transform: scale(1.1);
 }
 .card:hover span {
-    background-color: #08080848;
+    background-color: transparent;
 }
+.card:hover span p {
+    opacity: 0;
+}
+.card:hover span button {
+    transform: translateY(2rem);
+    background: #181717;
+}
+
+
 .card span p {
-    font-size: 2rem;
+    width: 15ch;
+    transition: 500ms;
+    text-align: center;
+    font-size: 1.9rem;
     margin-bottom: 5px;
 }
 .card span button {
+    transition: 300ms;
     width: 100px;
     height: 30px;
     border-radius: 1rem;
@@ -370,7 +386,7 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     width: clamp(320px, 50%, 350px);
-    max-height: 485px;
+    height: 485px;
     padding: 1rem;
     position: relative;
     border-radius: 1rem;
@@ -409,10 +425,10 @@ nav {
 }
 .gbr {
     width: 100%;
-    height: 200px;
+    height: 150px;
     margin: 1rem 0;
     border-radius: 1rem;
-    background-image: url(../bg/bg1.jpg);
+    background-image: url(../bg/bg5.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -471,7 +487,7 @@ section {
     justify-content: space-evenly;
     width: clamp(270px, 50%, 280px);
     transform: translateY(2rem);
-    height: 330px;
+    height: 320px;
     max-height: 485px;
     padding: 1rem;
     position: relative;
