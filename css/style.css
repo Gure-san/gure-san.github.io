@@ -640,8 +640,9 @@ footer {
 }
 .foot-2 p {
     margin-top: 3px;
+    line-height: 1.1rem;
     text-indent: 5px;
-    font-size: .8rem;
+    font-size: .9rem;
     width: 70%;
 }
 .social-media {
