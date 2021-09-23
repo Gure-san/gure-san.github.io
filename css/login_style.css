@@ -14,7 +14,7 @@ html,body,div,span,h1,h2,p,a,img,ol,ul,li,input,button {
 body {
     font-family: 'sans', sans-serif;
     color: white;
-    overflow-x: hidden;
+    overflow: hidden;
     background: #03030a;
     display: grid;
     place-items: center;
