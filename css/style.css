@@ -609,7 +609,6 @@ footer {
     padding: 20px 0;
 }
 .icon-support {
-    background-color: #030630;
     border: 1px solid #384696;
     border-radius: 10px;
     width: 50px;
@@ -680,7 +679,6 @@ footer {
     justify-content: space-between;
 }
 .social-media li {
-    background-color: #0f134d;
     border: 1px solid #374597;
     border-radius: 10px;
     width: 39px;
