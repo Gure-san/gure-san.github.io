@@ -35,8 +35,31 @@ body {
     border-left: 1px solid cyan;
 }
 
+
+.back {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100px;
+    border-radius: 1rem;
+    background: #135b9677;
+    text-decoration: none;
+    color: white;
+    font-size: .75rem;
+    transition: 500ms;
+}
+.back:hover {
+    background: #1169b198;
+}
+
+
+
 .isian {
-    width: 70%;
+    width: 100%;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -47,11 +70,11 @@ body {
 .header {
     font-family: 'sans';
     font-size: 1.8rem;
-    text-shadow:0px 0px 5px cyan;
+    text-shadow: 0px 0px 3px cyan;
 }
 .login input {
     font-size: .9rem;
-    width: clamp(250px, 50% ,300px);
+    width: 250px;
     height: 35px;
     text-align: center;
     background: rgba(0,0,0,.1);
@@ -59,20 +82,6 @@ body {
     color: white;
     border: none;
     border-bottom: 1px solid cyan;
-    transition: 300ms;
-}
-.login input[type = submit] {
-    font-size: .9rem;
-    width: 250px;
-    height: 35px;
-    text-align: center;
-    /* background: ; */
-    outline: none;
-    color: white;
-    border: none;
-    /* border: 2px solid cyan; */
-    border-radius: 1rem;
-    cursor: pointer;
     transition: 300ms;
 }
 input::placeholder {
@@ -84,23 +93,70 @@ input::placeholder {
     width: 330px;
 }
 .login button {
-    width: 110px;
+    width: 150px;
     height: 30px;
     outline: none;
-    border: 1px solid cyan;
-    background: transparent;
+    border: none;
+    border-radius: 1rem;
+    background: #2177777e;
     color: white;
     cursor: pointer;
     font-size: .8rem;
-    transition: .3s;
+    transition: 500ms;
 }
 .login button:hover {
-    background: rgba(0, 255, 255, 0.322);
+    background: #099797bd;
 }
-.kotak {
-    background: cyan;
-    border-radius: 10px;
+
+/* responsive */
+@media screen and (max-width: 576px) {
+    .login {
+        width: 85%;
+        height: 450px;
+        border: 2px solid cyan;
+        margin-top: 2rem;
+    }
+    .login input:focus {
+        background: rgba(0,0,0,.4);
+        width: 260px;
+    }
+    .header {
+        font-size: 6.5vw;
+    }
+
+
+    .back {
+        position: fixed;
+        top: 2.5%;
+        left: 9%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 100px;
+    }
+
+
+    .kotak {
+        display: none;
+    }
+    div.bawah {
+        display: none;
+    }
+    div.atas {
+        display: none;
+    }
+    div.kiri {
+        left: 13px;
+        display: none;
+    }
+    div.kanan {
+        right: 13px;
+        display: none;
+    }
 }
+
+
 .atas {
     position: fixed;
     display: flex;
@@ -111,6 +167,9 @@ input::placeholder {
     top: 3%;
     left: 0;
     right: 0;
+}
+.kotak {
+    background-color: cyan;
 }
 .satu {
     height: 1px;
