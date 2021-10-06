@@ -454,12 +454,6 @@ main {
     background-size: cover;
     background-position: center;
 }
-.gbr2 {
-    background-image: url(../bg/bg2.jpg);
-}
-.gbr3 {
-    background-image: url(../bg/bg3.jpg);
-}
 .box ul {
     list-style: none;
 }
