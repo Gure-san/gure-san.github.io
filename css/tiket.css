@@ -240,8 +240,8 @@ main {
     align-items: center;
 }
 .sub-one h2 {
-    width: clamp(320px, 50%, 400px);
-    height: 60px;
+    width: 300px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,7 +277,7 @@ main {
     border-radius: 1rem;
     border: 2px solid #3d3c3c;
     width: 95%;
-    height: 270px;
+    /* height: 270px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,6 +286,9 @@ main {
 }
 .sub-two .card:hover {
     transform: scale(1);
+}
+.sub-two .card span {
+    border: none;
 }
 .pop {
     position: absolute;
@@ -344,6 +347,7 @@ main {
     opacity: 1;
     transition: 300ms;
     border-radius: 10px;
+    border: 2px solid #5f5e5e;
 }
 .card:hover {
     transform: scale(1.1);
@@ -609,10 +613,47 @@ footer {
         order: 2;
     }
     .grid-two {
+        height: 925px;
         margin-bottom: 2rem;
         justify-content: space-between;
         order: 1;
     }
+
+
+    .sub-one > ul {
+        height: 600px;
+    }
+    .sub-one ul ul {
+        height: 90px;
+    }
+    .sub-two{
+        width: 350px;
+        height: 210px;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    .sub-two .card {
+        width: 350px;
+        height: 200px;
+        /* background-color: red; */
+    }
+    .sub-two .card span {
+        width: 100%;
+    }
+
+
+    .card {
+        width: 335px;
+        height: 250px;
+    }
+    .card span {
+        width: 335px;
+        height: 225px;
+    }
+    .card:hover {
+        transform: scale(1.04);
+    }
+    /* main area */
 
 
     footer {
