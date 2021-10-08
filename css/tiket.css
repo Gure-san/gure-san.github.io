@@ -635,7 +635,7 @@ footer {
     .sub-two .card {
         width: 350px;
         height: 200px;
-        /* background-color: red; */
+        background-color: red;
     }
     .sub-two .card span {
         width: 100%;
