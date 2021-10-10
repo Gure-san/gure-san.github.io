@@ -8,9 +8,10 @@ tombol.addEventListener('click', function() {
 
 // detail tiket 
 const detailBase = document.querySelectorAll('.detail');
+const infoDetail = document.querySelector('.info-detail');
 const containerButton = document.querySelector('main');
 const boxani = Array.from(document.querySelectorAll('.box'));
-console.log(boxani);
+console.log(infoDetail);
 
 containerButton.addEventListener('click', e => {
         if(e.target.classList.contains('tombol-satu')) {
@@ -46,6 +47,12 @@ containerButton.addEventListener('click', e => {
         if(e.target.classList.contains('tombol-enam')) {
                 detailBase[5].classList.add('fade-out');
                 boxani[5].classList.add('boxAni');
+                return e;
+        }
+
+        if(e.target.classList.contains('info-detail')) {
+                detailBase[6].classList.add('fade-out');
+                boxani[6].classList.add('boxAni');
                 return e;
         }
 
