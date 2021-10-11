@@ -8,10 +8,11 @@ tombol.addEventListener('click', function() {
 
 // detail tiket 
 const detailBase = document.querySelectorAll('.detail');
+const tombolBuy = document.querySelectorAll('.buy');
 const infoDetail = document.querySelector('.info-detail');
 const containerButton = document.querySelector('main');
 const boxani = Array.from(document.querySelectorAll('.box'));
-console.log(infoDetail);
+console.log(tombolBuy);
 
 containerButton.addEventListener('click', e => {
         if(e.target.classList.contains('tombol-satu')) {
