@@ -10,8 +10,67 @@
 <body>
     <div class="container">
         <div class="box">
-            <h1>Halaman Pembayaran</h1>
-            <input type="checkbox" name="" id="">
+            <a href="tiket.html" class="back"> Kembali </a>
+
+            <div class="sub satu">
+                <div class="judul">
+                    <h2> Metode Pembayaran </h1>
+                    <p>Pilih salah satu metode Pembayaran yang tersedia</p>
+                </div>
+
+                <div class="sub-box-satu">
+                    <label for="method-pembayaran-1">
+                        <div class="card one">
+                            <div class="radio"> 
+                                <input type="radio" id="method-pembayaran-1" name="method">
+                            </div>
+    
+                            <div class="img">
+                                <img src="thumb/mandiri.png" alt="mandiri">
+                            </div>
+                        </div>
+                    </label>
+
+                    <label for="method-pembayaran-2">
+                        <div class="card two">
+                            <div class="radio"> 
+                                <input type="radio" id="method-pembayaran-2" name="method">
+                            </div>
+    
+                            <div class="img">
+                                <img src="thumb/bca-2.png" alt="bca">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Bagian Data User -->
+            <form class="sub dua">
+                <div class="judul">
+                    <h2> Data Pembeli </h1>
+                    <p>Isikan data diri anda yang dibutuhkan untuk diproses lebih lanjut</p>
+                </div>
+
+                <div class="input-data">
+                    <label for="nama">
+                        Nama ∶
+                        <input type="text" name="data-user" required id="nama">
+                    </label>
+
+                    <label for="no-telp">
+                        No.Telp ∶
+                        <input type="text" name="data-user" required id="no-telp">
+                    </label>
+
+                    <label for="email">
+                        Email ∶ 
+                        <input type="text" name="data-user" required id="email">
+                    </label>
+                </div>
+                
+                <button type="submit"> Bayar </button>
+            </form>
         </div>
     </div>
 </body>
