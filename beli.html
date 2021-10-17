@@ -65,13 +65,19 @@
 
                     <label for="email">
                         Email ∶ 
-                        <input type="text" name="data-user" required id="email">
+                        <input type="email" name="data-user" required id="email">
                     </label>
                 </div>
                 
-                <button type="submit"> Bayar </button>
+                <button type="submit" class="confirm"> Bayar </button>
             </form>
         </div>
     </div>
+
+    <!-- lek te nyambungno nang database hapusen kabe kode nang tag script ndek ndisor iki -->
+    <script>
+        const tombol = document.querySelector('.confirm');
+        tombol.addEventListener('click', () => window.location.href = 'konfirmasi.html');
+    </script>
 </body>
 </html>

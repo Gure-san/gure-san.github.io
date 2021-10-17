@@ -1,0 +1,143 @@
+html,body,div,span,h1,h2,p,a,img,ol,ul,li {
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: none;
+}
+/* @font-face {
+    font-family: 'sans';
+    font-display: fallback;
+    src: url(../fonts/sans/SinkinSans-400Regular-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'richman';
+    font-display: fallback;
+    src: url(../fonts/recthman/RechtmanPlain-webfont.woff) format('woff');
+} */
+body::-webkit-scrollbar {
+    width: 4px;
+}
+body::-webkit-scrollbar-track {
+    background: #030016;
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,#030016,#4d5050 );
+    border-radius: 10px;
+}
+:root {
+    --textColor: hsl(251, 65%, 97%);
+    --borderCard: 2px solid #575656;
+    --liner: linear-gradient(to right, cyan,magenta);
+}
+
+/* General */
+
+body {
+    font-family: 'sans',sans-serif;
+    color: white;
+    background: #090213;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.box {
+    width: 400px;
+    height: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* box-sizing: border-box; */
+    background-color: #1f1d1d70;
+    box-shadow: inset 0 0 1rem #0c0c0c,
+                inset 0 0 1rem #030303;
+    border: 2px solid #353535;
+    border-radius: 1rem;
+}
+.judul {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: red; */
+}
+.box p {
+    width: 40ch;
+    font-size: 0.9rem;
+    color: #a9acac;
+}
+.icon {
+    color: lime;
+    text-shadow: 0 0 1rem lime;
+    font-size: 1.5rem;
+}
+
+
+.generate-link {
+    width: 100%;
+    height: 80px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.grup-tombol {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.grup-tombol button {
+    width: 150px;
+    height: 30px;
+    border-radius: 1rem;
+    color: white;
+    border: 2px solid #575656;
+    background: #202020;
+    cursor: pointer;
+    border: 2px solid #575656;
+    transition: 300ms;
+}
+a.ubah {
+    color: crimson; 
+    visibility: visible;
+}
+.link-generate {
+    color: transparent;
+    visibility: hidden;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 579px) {
+    .box {
+        width: 85%;
+        height: 180px;
+        padding-top: 2rem;
+    }
+    .judul {
+        width: 100%;
+    }
+    .icon {
+        display: none;
+    }
+    .box p {
+        width: 40ch;
+    }
+    .grup-tombol button {
+        width: 120px;
+    }
+}
