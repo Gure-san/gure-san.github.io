@@ -2,16 +2,6 @@ html,body,div,span,h1,h2,p,a,img,ol,ul,li {
     margin: 0;
     padding: 0;
 }
-/* @font-face {
-    font-family: 'sans';
-    font-display: fallback;
-    src: url(../fonts/sans/SinkinSans-400Regular-webfont.woff) format('woff');
-}
-@font-face {
-    font-family: 'richman';
-    font-display: fallback;
-    src: url(../fonts/recthman/RechtmanPlain-webfont.woff) format('woff');
-} */
 body::-webkit-scrollbar {
     width: 4px;
 }
@@ -24,16 +14,18 @@ body::-webkit-scrollbar-thumb {
 }
 :root {
     --textColor: hsl(251, 65%, 97%);
-    --borderCard: 1px solid #3a89a1;
+    --borderCard: 2px solid #575656;
+    --bgGeneral: #090213;
     --liner: linear-gradient(to right, cyan,magenta);
 }
 
 /* General */
 
 body {
-    font-family: 'sans',sans-serif;
+    font-family: sans-serif;
     color: white;
     overflow-x: hidden;
+    background: var(--bgGeneral);
 }
 
 
@@ -50,7 +42,7 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     z-index: 5;
-    background: #080808a1;
+    background: #080808d8;
     border-bottom: 1px solid #565858;
 }
 .navIcon {
@@ -64,8 +56,6 @@ nav {
     font-size: 2.5em;
     color: #d3d3d3;
 }
-
-
 .navItem {
     position: relative;
     right: -17rem;
@@ -117,7 +107,6 @@ nav {
     height: 3px;
     background-color: white;
     border-radius: 1rem;
-    /* box-shadow: 0 0 5px cyan; */
     transition: .3s;
     transform-origin: left;
 }
@@ -144,7 +133,6 @@ nav {
     background-color: #09090aaf;
     backdrop-filter: blur(5px);
     top: 0;
-    /* left: 0; */
     right: 0;
     z-index: 3;
     list-style: none;
@@ -217,7 +205,7 @@ nav {
     align-items: center;
     box-sizing: border-box;
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../bg/bg1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../bg/bg1.jpg);
     background-size: cover;
 }
 .judul-header {
@@ -466,6 +454,7 @@ main {
     padding: 1rem;
     border-radius: 1rem;
     background-color: #000000c4;
+    border: var(--borderCard);
 }
 .help p {
     font-size: .9rem;

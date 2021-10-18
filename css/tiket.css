@@ -20,6 +20,8 @@ body::-webkit-scrollbar-thumb {
 :root {
     --textColor: hsl(251, 65%, 97%);
     --borderCard: 1px solid #3a89a1;
+    --bgSub: #111010fd;
+    --shadow: inset 0 0 1rem #0c0c0c, inset 0 0 1rem #030303;
     --liner: linear-gradient(to right, cyan,magenta);
 }
 /* General */
@@ -28,7 +30,7 @@ body {
     font-family: 'sans',sans-serif;
     color: white;
     overflow-x: hidden;
-    background-color: black;
+    background: #090213;
 }
 
 
@@ -253,7 +255,8 @@ main {
     margin-bottom: 2rem;
 }
 .sub-one > ul {
-    background-color: #0f0f0fc9;
+    background-color: var(--bgSub);
+    box-shadow: var(--shadow);
     list-style: none;
     height: 500px;
     display: flex;
@@ -276,8 +279,9 @@ main {
 .sub-two {
     border-radius: 1rem;
     border: 2px solid #3d3c3c;
+    background-color: var(--bgSub);
+    box-shadow: var(--shadow);
     width: 95%;
-    /* height: 270px; */
     display: flex;
     align-items: center;
     justify-content: center;

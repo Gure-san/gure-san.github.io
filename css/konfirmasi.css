@@ -8,16 +8,6 @@ img {
     display: block;
     line-height: none;
 }
-/* @font-face {
-    font-family: 'sans';
-    font-display: fallback;
-    src: url(../fonts/sans/SinkinSans-400Regular-webfont.woff) format('woff');
-}
-@font-face {
-    font-family: 'richman';
-    font-display: fallback;
-    src: url(../fonts/recthman/RechtmanPlain-webfont.woff) format('woff');
-} */
 body::-webkit-scrollbar {
     width: 4px;
 }
@@ -31,6 +21,7 @@ body::-webkit-scrollbar-thumb {
 :root {
     --textColor: hsl(251, 65%, 97%);
     --borderCard: 2px solid #575656;
+    --bgSub: #111010fd;
     --liner: linear-gradient(to right, cyan,magenta);
 }
 
@@ -40,6 +31,8 @@ body {
     font-family: 'sans',sans-serif;
     color: white;
     background: #090213;
+    background-image: url(../svg/laptop-beli-2.svg);
+    background-size: cover;
 }
 .container {
     width: 100%;
@@ -58,8 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* box-sizing: border-box; */
-    background-color: #1f1d1d70;
+    background-color: var(--bgSub);
     box-shadow: inset 0 0 1rem #0c0c0c,
                 inset 0 0 1rem #030303;
     border: 2px solid #353535;
