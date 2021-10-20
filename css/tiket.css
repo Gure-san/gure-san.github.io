@@ -2,11 +2,6 @@ html,body,div,span,h1,h2,p,a,img,ol,ul,li {
     margin: 0;
     padding: 0;
 }
-/* @font-face {
-    font-family: 'sans';
-    font-display: fallback;
-    src: url(../fonts/sans/SinkinSans-400Regular-webfont.woff) format('woff');
-} */
 body::-webkit-scrollbar {
     width: 4px;
 }
@@ -37,6 +32,9 @@ body {
 .container {
     width: 100vw;
     overflow-x: hidden;
+    background-image: url(../svg/laptop-2.svg);
+    background-size: cover;
+    background-position: right;
 }
 nav {
     width: 100%;

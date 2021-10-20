@@ -28,12 +28,20 @@ body {
     color: white;
     overflow-x: hidden;
     background: var(--bgGeneral);
+    width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 
 .container {
     width: 100vw;
     overflow-x: hidden;
+    padding-top: 6rem;
+    background-image: url(../svg/laptop-3.svg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: repeat-y;
 }
 nav {
     width: 100%;
@@ -197,3 +205,243 @@ nav {
 }
 
 /* Navbar */
+
+
+
+main {
+    width: 800px;
+    background-color: var(--bgSub);
+    box-shadow: var(--shadow);
+    border: var(--borderCard);
+    box-sizing: border-box;
+    border-radius: 1rem;
+    margin: 2rem auto;
+}
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.simulasi {
+    height: 270px;
+}
+.tanya-jawab {
+    height: 350px;
+}
+.content {
+    padding-left: 1.2rem;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.content p {
+    color: white;
+    font-size: 1rem;
+}
+
+
+.tanya-jawab .content {
+    height: 350px;
+}
+.tanya-jawab .content ul li {
+    list-style: none;
+}
+
+/* Content Area */
+
+
+
+footer {
+    width: 100%;
+    background: var(--bgSub);
+    border-top: var(--borderCard);
+    display: flex;
+    position: relative;
+    bottom: 0;
+}
+.foot-1 {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-right: var(--borderCard);
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+}
+.icon-support {
+    border: 1px solid #384696;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+}
+.first img {
+    transform: translate(-2px,1px);
+}
+.foot-1 h2 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    transform: translateX(10px);
+}
+.foot-1 li:first-child {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.foot-1 li p {
+    font-size: 1rem;
+    cursor: pointer;
+}
+.foot-1 li:nth-child(2) {
+    width: 220px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.foot-1 li:last-child {
+    width: 220px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.foot-2 {
+    background-color: transparent;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 40px 0;
+}
+.foot-2 h2 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    font-weight: 500;
+}
+.foot-2 p {
+    margin-top: 3px;
+    line-height: 1.1rem;
+    text-indent: 5px;
+    font-size: .9rem;
+    width: 70%;
+}
+.social-media {
+    margin-top: 10px;
+    width: 20%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.social-media li {
+    border: 1px solid #374597;
+    border-radius: 10px;
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+
+/* responsive */
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 4rem 0;
+    }
+    nav {
+        justify-content: space-around;
+        height: 80px;
+    }
+    .navIcon {
+        left: -1rem;
+    }
+    .navItem {
+        right: -1rem;
+        justify-content: center;
+    }
+    .nav-toggle {
+        padding: 4vh 0;
+        width: 100vw;
+        backdrop-filter: blur(0);
+        background-color: #0b0b0cfa;
+        border: none;
+        box-shadow: none;
+    }
+    .login {
+        display: none;
+    }
+    .onoff {
+        visibility: visible;
+        position: static;
+    }
+
+    /* Area navbar responsive */
+
+
+
+    main {
+        width: 93%;
+    }
+    .box {
+        padding: 2rem 1.5rem;
+    }
+    .simulasi {
+        height: 450px;
+    }
+    .tanya-jawab {
+        height: 700px;
+        padding-top: 0rem;
+    }
+    .content {
+        height: 100%;
+    }
+    .tanya-jawab .content {
+        height: 100%;
+    }
+
+
+
+    footer {
+        flex-wrap: wrap;
+    }
+    .foot-1{
+        border-right: none;
+    }
+    .foot-1,
+    .foot-2 {
+        width: 100%;
+        padding: 2rem;
+        border-bottom: var(--borderCard);
+    }
+    .foot-2 {
+        order: 1;
+    }
+    .foot-2 p {
+        width: 90%;
+    }
+    .social-media {
+        margin-top: 1rem;
+        width: clamp(160px, 50%, 170px);
+    }
+    .foot-1 {
+        order: 2;
+    }
+    .foot-1 h2 {
+        transform: translateX(0px);
+    }
+}

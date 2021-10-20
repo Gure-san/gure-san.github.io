@@ -2,17 +2,12 @@ html,body,div,span,h1,h2,p,a,img,ol,ul,li,input,button {
     margin: 0;
     padding: 0;
 }
-@font-face {
-    font-family: 'sans';
-    font-display: fallback;
-    src: url(../fonts/sans/SinkinSans-400Regular-webfont.woff) format('woff');
-}
 /* General */
 
 
 
 body {
-    font-family: 'sans', sans-serif;
+    font-family:  sans-serif;
     color: white;
     overflow: hidden;
     background: #03030a;
@@ -68,9 +63,9 @@ body {
     transform: translateY(-1rem);
 }
 .header {
-    font-family: 'sans';
+    font-family: sans-serif;
     font-size: 1.8rem;
-    text-shadow: 0px 0px 3px cyan;
+    text-shadow: 0px 0px 2px cyan;
 }
 .login input {
     font-size: .9rem;
