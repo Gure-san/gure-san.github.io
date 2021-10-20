@@ -29,8 +29,6 @@ body {
     overflow-x: hidden;
     background: var(--bgGeneral);
     width: 100%;
-    display: grid;
-    place-items: center;
 }
 
 
@@ -41,7 +39,7 @@ body {
     background-image: url(../svg/laptop-3.svg);
     background-size: cover;
     background-position: left;
-    background-repeat: repeat-y;
+    /* background-repeat: repeat-y; */
 }
 nav {
     width: 100%;
@@ -361,7 +359,7 @@ footer {
 /* responsive */
 @media screen and (max-width: 576px) {
     .container {
-        padding: 4rem 0;
+        padding: 4rem 0 0;
     }
     nav {
         justify-content: space-around;
