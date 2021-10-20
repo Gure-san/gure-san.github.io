@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 }
 :root {
     --textColor: hsl(251, 65%, 97%);
-    --borderCard: 1px solid #3a89a1;
+    --borderCard: 2px solid #575656;
     --bgSub: #111010fd;
     --shadow: inset 0 0 1rem #0c0c0c, inset 0 0 1rem #030303;
     --liner: linear-gradient(to right, cyan,magenta);
@@ -48,7 +48,7 @@ nav {
     justify-content: space-evenly;
     z-index: 5;
     background: #080808d8;
-    border-bottom: 1px solid #565858;
+    border-bottom: 2px solid #565858;
 }
 .navIcon {
     position: relative;
@@ -492,8 +492,8 @@ main {
 
 footer {
     width: 100%;
-    background: #080808fa;
-    border-top: 1px solid crimson;
+    background: var(--bgSub);
+    border-top: var(--borderCard);
     display: flex;
     position: relative;
     bottom: 0;
@@ -506,7 +506,8 @@ footer {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    border-right: 1px solid crimson;
+    border-right: var(--borderCard);
+    box-shadow: var(--shadow);
     padding: 20px 0;
 }
 .icon-support {
@@ -552,6 +553,7 @@ footer {
 }
 .foot-2 {
     background-color: transparent;
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -681,7 +683,7 @@ footer {
     .foot-2 {
         width: 100%;
         padding: 2rem; 
-        border-bottom: 1px solid crimson;
+        border-bottom: var(--borderCard);
     }
     .foot-2 {
         order: 1;
