@@ -389,8 +389,9 @@ main {
     padding: 1rem;
     position: relative;
     border-radius: 1rem;
-    background-color: #080808d5;
-    border: 2px solid #919494;
+    background-color: var(--bgSub);
+    border: var(--borderCard);
+    box-shadow: var(--shadow);
 }
 .boxAni {
     animation: boxani 700ms ease forwards;
