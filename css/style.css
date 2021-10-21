@@ -208,9 +208,9 @@ nav {
     box-sizing: border-box;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../bg/bg1.jpg);
+    background-size: cover;
     /* background-position: top; */
     /* background-image: url(../svg/laptop-1.svg); */
-    background-size: cover;
 }
 .judul-header {
     width: 490px;
@@ -264,8 +264,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
+    /* background-image: url(../svg/laptop-1.svg); */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(27, 27, 27, 0.5)), url(../bg/bg3.jpg);
     position: relative;
     padding: 10rem 0;
@@ -531,6 +532,8 @@ section {
     align-items: center;
     padding: 10rem 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../bg/bg2.jpg);
+    /* background-image: url(../svg/laptop-5.svg); */
+    background-size: cover;
 }
 .layanan {
     margin-top: 5rem;
@@ -571,8 +574,9 @@ section {
     padding: 1rem;
     position: relative;
     border-radius: 1rem;
-    background-color: #080808d5;
-    border: 1px solid #919494;
+    background: var(--bgSub);
+    box-shadow: var(--shadow);
+    border: var(--borderCard);
 }
 .kotak {
     width: 300px;
@@ -580,8 +584,9 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: #1a1818e1;
-    border: 2px solid #575656d5;
+    background: var(--bgSub);
+    box-shadow: var(--shadow);
+    border: var(--borderCard);
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
@@ -794,7 +799,7 @@ footer {
 
     .hero {
         width: 100%;
-        /* background-position: bottom; */
+        background-position: center;
     }
     .judul-header {
         transform: translateY(1rem);
@@ -835,6 +840,13 @@ footer {
     }
 
     /* Area Header responsive */
+
+    section {
+        background-position: center;
+    }
+    main {
+        background-position: top;
+    }
 
 
     .help-container {
