@@ -49,7 +49,6 @@ nav {
 }
 .navIcon {
     position: relative;
-    left: -12rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,10 +61,24 @@ nav {
     position: relative;
     right: -17rem;
     width: 20%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-evenly;
     height: 50px;
+}
+.navInline {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 50%;
+    transform: translateX(8rem);
+}
+.navInline li a {
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--textColor);
+    transition: 300ms;
 }
 
 
@@ -777,11 +790,15 @@ footer {
         left: -1rem;
     }
     .navItem {
+        display: flex;
         right: -1rem;
         justify-content: center;
     }
+    .navInline {
+        display: none;
+    }
     .nav-toggle {
-        padding: 4vh 0;
+        padding: 6.5vh 0;
         width: 100vw;
         backdrop-filter: blur(0);
         background-color: #0b0b0cfa;

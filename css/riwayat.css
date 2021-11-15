@@ -25,21 +25,18 @@ body::-webkit-scrollbar-thumb {
 
 body {
     font-family: sans-serif;
-    color: white;
     overflow-x: hidden;
+    color: var(--textColor);
     background: var(--bgGeneral);
-    width: 100%;
 }
 
 
 .container {
-    width: 100vw;
-    overflow-x: hidden;
-    padding-top: 6rem;
-    background-image: url(../svg/laptop-3.svg);
+    width: 100%;
+    height: 100%;
+    background-image: url(../svg/laptop-2.svg);
     background-size: cover;
-    background-position: left;
-    /* background-repeat: repeat-y; */
+    background-position: right;
 }
 nav {
     width: 100%;
@@ -86,6 +83,7 @@ nav {
     color: var(--textColor);
     transition: 300ms;
 }
+
 
 
 .login {
@@ -216,54 +214,140 @@ nav {
 
 /* Navbar */
 
-
-
 main {
-    width: 800px;
-    background-color: var(--bgSub);
-    box-shadow: var(--shadow);
-    border: var(--borderCard);
+    width: 90%;
+    /* height: 500px; */
+    /* max-height: 520px; */
+    margin: 10.4vh auto;
+    padding: 2rem;
+    position: relative;
     box-sizing: border-box;
+    box-shadow: var(--shadow);
+    background-color: var(--bgSub);
+    border: var(--borderCard);
+    /* border: 2px solid #111111; */
+    transform: translateY(2.5rem);
     border-radius: 1rem;
-    margin: 2rem auto;
+    overflow-y: auto;
 }
-.box {
+main::-webkit-scrollbar {
+    width: 4px;
+}
+main::-webkit-scrollbar-track {
+    background: transparent;
+}
+main::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+.default {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.default img {
+    filter: drop-shadow( 0 0 5px #444343 );
+}
+.default p {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: #7c7a7a;
+}
+
+
+.card:not(:first-child) {
+    margin-top: 2rem;
+}
+.card {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    border-radius: 1rem;
+    /* overflow: hidden; */
+    border: var(--borderCard);
+}
+.card .info {
+    /* background-color: blue; */
+    display: flex;
+    width: 500px;
+    height: 100%;
+    border-right: var(--borderCard);
+}
+.infoDetail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
     box-sizing: border-box;
+    padding: 3.5rem 0;
+}
+.status {
+    border: var(--borderCard);
+    margin-top: 8px;
+    padding: 8px 1rem;
     border-radius: 1rem;
-    padding: 2rem;
+    font-size: .8rem;
+    color: #f74a6c;
 }
-.simulasi {
-    height: 270px;
+.card .info img { 
+    width: 200px; 
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
-.tanya-jawab {
-    height: 350px;
-}
-.content {
-    padding-left: 1.2rem;
-    height: 180px;
+
+
+.konfirmasi {
+    /* background-color: red; */
+    border-left: var(--borderCard);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    width: 350px;
+    height: 100%;
 }
-.content p {
-    color: white;
-    font-size: 1rem;
+.konfirmasi button {
+    width: 120px;
+    height: 35px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    border: var(--borderCard);
+    background-color: var(--bgSub);
+    color: var(--textColor);
+    cursor: pointer;
 }
 
 
-.tanya-jawab .content {
-    height: 350px;
+input[type = 'file']::-webkit-file-upload-button {
+    width: 120px;
+    height: 35px;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bgSub);
+    border: var(--borderCard);
+    /* border: none; */
+    color: var(--textColor);
+    outline: none;
+    cursor: pointer;
 }
-.tanya-jawab .content ul li {
-    list-style: none;
+input[type = 'file'] {
+    /* background-color: red; */
+    margin-top: 1rem;
+    /* box-shadow: var(--shadow); */
+    background-color: var(--bgSub);
+    border: var(--borderCard);
+    border-radius: 1rem;
+    width: 250px;
 }
 
-/* Content Area */
-
+/* main area */
 
 
 footer {
@@ -368,11 +452,8 @@ footer {
 }
 
 
-/* responsive */
+/* responsive area */
 @media screen and (max-width: 576px) {
-    .container {
-        padding: 4rem 0 0;
-    }
     nav {
         justify-content: space-around;
         height: 80px;
@@ -406,29 +487,51 @@ footer {
 
     /* Area navbar responsive */
 
-
-
     main {
-        width: 93%;
+        margin: 12vh auto;
+        /* padding: 1rem; */
     }
-    .box {
-        padding: 2rem 1.5rem;
+    .default img {
+        width: 300px;
     }
-    .simulasi {
-        height: 450px;
+    .default p {
+        font-size: 1.2rem;
     }
-    .tanya-jawab {
-        height: 700px;
-        padding-top: 0rem;
+    .card {
+        height: 550px;
+        flex-direction: column;
     }
-    .content {
-        height: 100%;
+    .card .info {
+        width: 100%;
+        height: 350px;
+        /* background-color: blue; */
+        border: none;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: var(--borderCard);
     }
-    .tanya-jawab .content {
-        height: 100%;
+    .card .infoDetail {
+        height: 150px;
+        padding: 2rem 0;
+        /* background-color: red; */
+    }
+    .card .konfirmasi {
+        width: 100%;
+        height: 200px;
+        /* background-color: blue; */
+        border: none;
+    }
+    .card .info img { 
+        width: 100%;
+        height: 200px;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .card input[type = 'file'] { width: 250px; }
+    input[type = 'file']::-webkit-file-upload-button {
+        margin: 10px 1rem;
     }
 
-
+    /* main area */
 
     footer {
         flex-wrap: wrap;
